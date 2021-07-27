@@ -1,7 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-  return <h1>oden-blog</h1>;
-}
+const App: React.VFC = () => {
+  return <h1>おでんくんのブログ</h1>;
+};
+
+export default App;
