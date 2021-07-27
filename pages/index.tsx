@@ -1,10 +1,19 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Layout, { siteTitle } from "../components/Layout"
+import { NextPage } from "next";
+import { postDataResult } from "../types";
 
-const App: React.VFC = () => {
-  return <h1>おでんくんのブログ</h1>;
+const Home: NextPage<{allPostsData: Array<postDataResult>}> = ({allPostsData}: {allPostsData: Array<postDataResult>}) => {
+  return (
+    <Layout home={true}>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      
+    </Layout>
+  )
 };
 
-export default App;
+export default Home;
