@@ -1,19 +1,47 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Layout, { siteTitle } from "../components/Layout"
-import { NextPage } from "next";
-import { postDataResult } from "../types";
+import { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import Date from '../components/date';
+import Layout from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
+import { getPostsData } from '../lib/posts';
+import { postData } from '../types';
 
-const Home: NextPage<{allPostsData: Array<postDataResult>}> = ({allPostsData}: {allPostsData: Array<postDataResult>}) => {
-  return (
-    <Layout home={true}>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      
-    </Layout>
-  )
-};
+export const getStaticProps: GetStaticProps = async () => {
+	const allPostsData: Array<postData> = getPostsData();
+	return {
+		props: {
+			allPostsData,
+		},
+	};
+}
 
-export default Home;
+type Props = {
+	allPostsData: Array<postData>
+}
+
+const Home: NextPage<Props>= ({ allPostsData }) => {
+	return (
+		<Layout home>
+			<Head>…</Head>
+			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+				<h2 className={utilStyles.headingLg}>Blog</h2>
+				<ul className={utilStyles.list}>
+					{allPostsData.map(({ id, date, title }) => (
+						<li className={utilStyles.listItem} key={id}>
+							<Link href={`/posts/${id}`}>
+								<a>{title}</a>
+							</Link>
+							<br />
+							<small className={utilStyles.lightText}>
+								<Date dateString={date} />
+							</small>
+						</li>
+					))}
+				</ul>
+			</section>
+		</Layout>
+	);
+}
+
+export default Home
