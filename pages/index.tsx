@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getPostsData } from '../lib/posts';
 import { postData } from '../types';
+import genbaneko from "../public/images/genbaneko.gif"
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData: Array<postData> = getPostsData();
@@ -24,6 +25,7 @@ const Home: NextPage<Props>= ({ allPostsData }) => {
 	return (
 		<Layout home>
 			<Head>…</Head>
+			<img src={genbaneko} />
 			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 				<h2 className={utilStyles.headingLg}>Blog</h2>
 				<ul className={utilStyles.list}>
