@@ -1,0 +1,10 @@
+.wrapper {
+  margin-top: 2rem;
+}
+
+.name {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(62, 114, 88);
+}
+
+.subTitle {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  color: rgb(151, 151, 151);
+}

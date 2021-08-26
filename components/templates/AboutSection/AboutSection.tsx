@@ -1,12 +1,15 @@
 import { NextPage } from "next"
-import Image from "../../atoms/Image"
+import SectionTitle from "../../atoms/SectionTitle"
+import Profile from "../../organisms/Profile"
 
 const HomeSection: NextPage = () => {
   return (
     <section>
-      <h2>About Me</h2>
-      <h4>私について</h4>
-      <Image />
+      <SectionTitle
+        title="About Me"
+        subTitle="私について"
+      />
+      <Profile />
     </section>
   )
 }
