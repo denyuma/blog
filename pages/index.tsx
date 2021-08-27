@@ -7,6 +7,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getPostsData } from '../lib/posts';
 import { postData } from '../types';
 import AboutSection from '../components/templates/AboutSection';
+import SkillSection from '../components/templates/SkillSection';
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData: Array<postData> = getPostsData();
@@ -30,6 +31,7 @@ const Home: NextPage<Props>= ({ allPostsData }) => {
 				</title>
 			</Head>
 			<AboutSection />
+			<SkillSection />
 			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 				<h2 className={utilStyles.headingLg}>Blog</h2>
 				<ul className={utilStyles.list}>
