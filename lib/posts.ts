@@ -5,15 +5,6 @@ import remark from 'remark';
 import html from 'remark-html';
 import { allPostsIdsType, postData } from '../types';
 
-type fileNameId = {
-  params:{
-    id: string
-  }
-}
-
-
-
-
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export const getPostsData = (): Array<postData> => {
