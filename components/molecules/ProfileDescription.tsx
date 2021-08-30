@@ -4,10 +4,10 @@ import styles from "./ProfileDescription.module.css"
 const ProfileDescription : NextPage = () => {
   return (
     <div className="text-xl" >
-      <table className="mt-12 ml-12" >
+      <table className="mt-12 ml-12 text-lg" >
         <tbody>
           <tr>
-            <td className="w-32 h-12 font-medium " >Affiliation</td>
+            <td className="w-32 h-12 font-medium  " >Affiliation</td>
             <td>京都工芸繊維大学</td>
           </tr>
           <tr>
