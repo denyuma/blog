@@ -7,13 +7,13 @@ import SNSIcon from "../atoms/SNSIcon"
 
 const SNSLinks: NextPage = () => (
   <div className="flex" >
-    <SNSIcon href="https://github.com/denyuma" bgColor="bg-gray-700" text="GitHub" ml="10">
+    <SNSIcon href="https://github.com/denyuma" bgColor="bg-gray-700" text="GitHub" >
       <FaGithub size="1.4rem" />
     </SNSIcon>
-    <SNSIcon href="https://atcoder.jp/users/omattosan" bgColor="bg-green-500" text="AtCoder" ml="5" >
+    <SNSIcon href="https://atcoder.jp/users/omattosan" bgColor="bg-green-500" text="AtCoder"  >
       <BiLinkAlt size="1.4rem" />
     </SNSIcon>
-    <SNSIcon href="/posts/" bgColor="bg-blue-400" text="Blog" ml="5" >
+    <SNSIcon href="/posts/" bgColor="bg-blue-400" text="Blog" >
       <BsPencil size="1.4rem" />
     </SNSIcon>
   </div>

@@ -8,13 +8,12 @@ type Props = {
   color?: string,
   text: string,
   rotate?: boolean,
-  ml: string,
 }
 
-const SkillItem: NextPage<Props> = ({children, bgColor, color, text, rotate, ml}) => {
+const SkillItem: NextPage<Props> = ({children, bgColor, color, text, rotate}) => {
   if (rotate) {
     return (
-      <div className={`flex ${bgColor} ${color} rounded-full px-4 py-2 ml-${ml}`}> 
+      <div className={`flex ${bgColor} ${color} rounded-full px-4 py-2 ml-5`}> 
         <div className={styles.rotate} >
             {children}
         </div>
@@ -24,7 +23,7 @@ const SkillItem: NextPage<Props> = ({children, bgColor, color, text, rotate, ml}
   }
 
   return (
-    <div className={`flex ${bgColor} ${color} rounded-full px-4 py-2 ml-${ml}`}> 
+    <div className={`flex ${bgColor} ${color} rounded-full px-4 py-2 ml-5`}> 
       {children}
       <span className="text-base ml-1" >{text}</span>
     </div>
